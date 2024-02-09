@@ -1,8 +1,8 @@
 # My.BookStore
 
-## This in my first project as a backend developer. using abp framework.
+## This is a project using abp framework.
 ## This project is Based on the Acme.BookStore from abp tutorials with a little bit of change...
-* I Leave The original ReadMe Article for people who wants to clone and run this project :)
+* I Leave The original ReadMe Article unchanged for people who wants to clone and run this project :)
 
 This is a layered startup solution based on [Domain Driven Design (DDD)](https://docs.abp.io/en/abp/latest/Domain-Driven-Design) practises. All the fundamental ABP modules are already installed. 
 
