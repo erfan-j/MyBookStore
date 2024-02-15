@@ -65,10 +65,3 @@ This is a layered monolith application that consists of the following applicatio
 
 Deploying an ABP application is not different than deploying any .NET or ASP.NET Core application. However, there are some topics that you should care about when you are deploying your applications. You can check ABP's [Deployment documentation](https://docs.abp.io/en/abp/latest/Deployment/Index) before deploying your application.
 
-### Additional resources
-
-You can see the following resources to learn more about your solution and the ABP Framework:
-
-* [Web Application Development Tutorial](https://docs.abp.io/en/abp/latest/Tutorials/Part-1)
-* [Application Startup Template Structure](https://docs.abp.io/en/abp/latest/Startup-Templates/Application)
-* [LeptonX Lite MVC UI](https://docs.abp.io/en/abp/latest/Themes/LeptonXLite/AspNetCore)
