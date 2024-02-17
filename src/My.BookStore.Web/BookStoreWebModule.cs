@@ -2,6 +2,7 @@ using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +11,7 @@ using My.BookStore.Localization;
 using My.BookStore.MultiTenancy;
 using My.BookStore.Web.Menus;
 using Microsoft.OpenApi.Models;
+using My.BookStore.Permissions;
 using OpenIddict.Validation.AspNetCore;
 using Volo.Abp;
 using Volo.Abp.Account.Web;
@@ -110,7 +112,7 @@ public class BookStoreWebModule : AbpModule
         ConfigureVirtualFileSystem(hostingEnvironment);
         ConfigureNavigationServices();
         ConfigureAutoApiControllers();
-        ConfigureSwaggerServices(context.Services);
+        ConfigureSwaggerServices(context.Services); 
     }
 
     private void ConfigureAuthentication(ServiceConfigurationContext context)
