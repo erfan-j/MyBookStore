@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using My.BookStore.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
@@ -12,9 +13,11 @@ using Volo.Abp.EntityFrameworkCore;
 namespace My.BookStore.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240226175054_Added_Authors")]
+    partial class Added_Authors
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
