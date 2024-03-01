@@ -8,7 +8,6 @@ using Volo.Abp.Domain.Repositories;
 
 namespace My.BookStore.Authors;
 
-[Authorize(BookStorePermissions.Authors.Default)]
 public class AuthorAppService : BookStoreAppService, IAuthorAppService
 {
     private readonly IAuthorRepository _authorRepository;
@@ -53,7 +52,6 @@ public class AuthorAppService : BookStoreAppService, IAuthorAppService
         );
     }
     
-    [Authorize(BookStorePermissions.Authors.Create)]
     public async Task<AuthorDto> CreateAsync(CreateAuthorDto input)
     {
         var author = await _authorManager.CreateAsync(
@@ -67,7 +65,6 @@ public class AuthorAppService : BookStoreAppService, IAuthorAppService
         return ObjectMapper.Map<Author, AuthorDto>(author);
     }
     
-    [Authorize(BookStorePermissions.Authors.Edit)]
     public async Task UpdateAsync(Guid id, UpdateAuthorDto input)
     {
         var author = await _authorRepository.GetAsync(id);
@@ -83,7 +80,6 @@ public class AuthorAppService : BookStoreAppService, IAuthorAppService
         await _authorRepository.UpdateAsync(author);
     }
     
-    [Authorize(BookStorePermissions.Authors.Delete)]
     public async Task DeleteAsync(Guid id)
     {
         await _authorRepository.DeleteAsync(id);
