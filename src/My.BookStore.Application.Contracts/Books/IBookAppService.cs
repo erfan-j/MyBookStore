@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
@@ -13,5 +14,5 @@ public interface IBookAppService : ICrudAppService
     > 
     //or you can inherite from this : IApplicationService
 {
-    
+    Task<ListResultDto<AuthorLookupDto>> GetAuthorLookupAsync();
 }
